@@ -9,17 +9,17 @@
 <script>
 import axios from "axios";
 export default {
-  methods: {
-    async serch() {
-    const item = await axios.get(`https://apis.postcode-jp.com/api/v4/U5NZRvRIZStqlmUptvesc9x2LP0wiOj11LKjSxW/postcode?allAddress
-`);
-    console.log(item);
-    }
-  },
   data() {
     return {
       address: "",
     };
+  },
+  methods: {
+    async serch() {
+    const item = await axios.get(`https://apis.postcode-jp.com/api/v4/postcodes/{{this.address}}?apikey=U5NZRvRIZStqlmUptvesc9x2LP0wiOj11LKjSxW`);
+    console.log(item);
+    }
   }
 }
 </script>
+
