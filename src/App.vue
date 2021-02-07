@@ -12,15 +12,15 @@ export default {
   data() {
     return {
       address: "",
+      showAddress: this.item.data[0].allAdress
     };
   },
     methods: {
       async serch() {
         const item = await axios.get(`https://apis.postcode-jp.com/api/v4/postcodes/${this.address}?apikey=U5NZRvRIZStqlmUptvesc9x2LP0wiOj11LKjSxW`);
-        return showAddress = item.data[0].allAdress;
       }
     }
-  }
+  };
 </script>
 
 
